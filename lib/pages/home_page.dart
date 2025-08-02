@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
 
           //Dashboard
           Expanded(
-            flex: 3,
+            flex: 8,
             child: SizedBox(
               child: Dashboard(),
             ),

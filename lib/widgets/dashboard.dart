@@ -1,3 +1,5 @@
+import 'package:fitness_tracker/widgets/activity_widget.dart';
+import 'package:fitness_tracker/widgets/headerWidget.dart';
 import 'package:flutter/material.dart';
 
 class Dashboard extends StatefulWidget {
@@ -10,13 +12,17 @@ class Dashboard extends StatefulWidget {
 class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Text(
-          "Dashboard",
-           style: TextStyle(
-            color: const Color.fromARGB(255, 119, 102, 102),
-          ),
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 18),
+        child: Column(
+          children: [
+            SizedBox(height: 15,),
+            HeaderWidget(),
+            SizedBox(height: 15),
+
+            ActivityWidget(),
+          ],
         ),
       ),
     );
