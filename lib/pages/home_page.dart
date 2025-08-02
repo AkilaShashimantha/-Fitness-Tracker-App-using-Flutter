@@ -14,7 +14,7 @@ class HomePage extends StatelessWidget {
          
          //Side Menu
           Expanded(
-            flex: 5,
+            flex: 2,
             child: SizedBox(
              child: SideMenu(),
             ),
