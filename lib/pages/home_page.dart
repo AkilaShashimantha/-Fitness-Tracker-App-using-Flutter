@@ -1,3 +1,6 @@
+import 'package:fitness_tracker/widgets/dashboard.dart';
+import 'package:fitness_tracker/widgets/side_menu.dart';
+import 'package:fitness_tracker/widgets/summary_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -12,24 +15,24 @@ class HomePage extends StatelessWidget {
          //Side Menu
           Expanded(
             flex: 5,
-            child: Container(
-              color: Colors.red,
+            child: SizedBox(
+             child: SideMenu(),
             ),
           ),
 
           //Dashboard
           Expanded(
             flex: 3,
-            child: Container(
-              color: Colors.green,
+            child: SizedBox(
+              child: Dashboard(),
             ),
           ),
 
           //Summary
           Expanded(
             flex: 4,
-            child: Container(
-              color: Colors.blue,
+            child: SizedBox(
+              child: Summary(),
             ),
           ),
         ],
