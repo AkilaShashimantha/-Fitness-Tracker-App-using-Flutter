@@ -6,7 +6,7 @@ class BarGraphData {
 
 final data = [
 
-  BarGraphModel(label: "Claories Burned", color: Color.fromARGB(255, 90, 128, 154),
+  BarGraphModel(label: "Claories Burned", color: Color.fromARGB(255, 41, 98, 136),
    graph: [
     GraphModel(x: 0, y: 8),
      GraphModel(x: 1, y: 18),

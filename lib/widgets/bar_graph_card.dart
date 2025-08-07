@@ -105,7 +105,7 @@ x: point.x.toInt(),
 barRods: [
   BarChartRodData(toY: point.y,
   width: 12,
-  color: color,
+  color: color.withOpacity(point.y.toInt() > 5 ? 1 : 0.4),
   borderRadius: BorderRadius.only(
     topLeft: Radius.circular(10),
     topRight: Radius.circular(10),
