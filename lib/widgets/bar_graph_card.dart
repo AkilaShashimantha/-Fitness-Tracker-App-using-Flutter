@@ -1,6 +1,7 @@
 import 'package:fitness_tracker/constants/colors.dart';
 import 'package:fitness_tracker/data/bar_graph_data.dart';
 import 'package:fitness_tracker/models/grapgh_model.dart';
+import 'package:fitness_tracker/utils/responsive.dart';
 import 'package:fitness_tracker/widgets/custom_card.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
@@ -12,13 +13,13 @@ class BarGraphCard extends StatelessWidget {
   Widget build(BuildContext context) {
 
 final barGraphData = BarGraphData();
-
+final bool isMobile = Responsive.isMobile(context);
     return GridView.builder(
       itemCount: barGraphData.data.length,
       shrinkWrap: true,
       physics: ScrollPhysics(),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 3,
+        crossAxisCount: isMobile ? 2 : 3,
         mainAxisSpacing: 12,
         crossAxisSpacing: 15,
         childAspectRatio: 5/4,
